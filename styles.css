@@ -490,17 +490,23 @@ main {
     gap: 0.5rem;
   }
 
+main table[cellpadding="10"] tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   main table[cellpadding="10"] tr td {
-    padding: 1rem !important;
+    padding: 0.8rem !important;
     text-align: center !important;
   }
 
   main table[cellpadding="10"] tr td:first-child {
-    display: none;
+    display: block;
   }
 
   main table img {
-    width: 30px !important;
+    width: 35px !important;
     height: auto;
   }
 
