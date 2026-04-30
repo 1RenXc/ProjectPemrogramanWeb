@@ -4,107 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Dearen Kansil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body bgcolor="#000018" text="white" link="silver" vlink="gray" alink="silver">
+    <canvas id="matrix-canvas"></canvas>
+    <nav>
+        <div class="nav-container">
 
-    <table border="0" width="100%" cellpadding="10" bgcolor="#222222">
-        <tr>
-            <td align="center">
-                <font face="Arial">
-                    <a href="index.html">Beranda</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="gallery.html">Galeri</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="blog.html">Blog</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="contact.html">Kontak</a>
-                </font>
-            </td>
-        </tr>
-    </table>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
     <br><br>
 
     <main>
-        <h1 align="center"><font face="Arial">Blog</font></h1>
+        <h1>Blog</h1>
         
-        <table border="0" width="800" align="center" cellpadding="0" cellspacing="0">
-            <tr>
-                <td>
+        <div class="blog-grid">
+            <article class="blog-card fade-in">
+                <img src="Photo&vid/Guitarist.jpeg" alt="Guitarist Syner" loading="lazy">
+                <div class="blog-card-content">
+                    <h3><a href="artikel-guitar-syner.html">Guitarist dari Band Syner</a></h3>
+                    <div class="blog-meta">18 Maret 2026</div>
+                    <p>Perkenalkan saya Dearen Kansil. Saya adalah guitarist di band Syner.</p>
+                </div>
+            </article>
 
-                    <table border="0" width="100%" cellpadding="10">
-                        <tr>
-                            <td width="250" valign="top">
-                                <img src="./Photo&vid/Guitarist.jpeg" width="250" alt="Guitarist Syner">
-                            </td>
-                            <td valign="top">
-                                <h3><font face="Arial"><a href="artikel-guitar-syner.html">Guitarist dari Band Syner</a></font></h3>
-                                <font face="Arial" size="2" color="silver">Diterbitkan pada 18 Maret 2026</font>
-                                <p align="justify"><font face="Arial">Perkenalkan saya Dearen Kansil. Saya adalah guitarist di band Syner.</font></p>
-                            </td>
-                        </tr>
-                    </table>
-                    <hr color="#333" size="1">
+            <article class="blog-card fade-in">
+                <img src="Photo&vid/Menembak.jpeg" alt="Atlet Muda Bitung" loading="lazy">
+                <div class="blog-card-content">
+                    <h3><a href="artikel-pribadi1.html">Atlet Muda Menembak Asal Bitung</a></h3>
+                    <div class="blog-meta">17 Maret 2026</div>
+                    <p>Atlet muda asal Bitung berbagi prestasi menembak: medali perak 2018, nasional Balikpapan 2019, POPNAS 2023.</p>
+                </div>
+            </article>
 
-                    <table border="0" width="100%" cellpadding="10">
-                        <tr>
-                            <td width="250" valign="top">
-                                <img src="./Photo&vid/Menembak.jpeg" width="250" alt="Atlet Muda Bitung">
-                            </td>
-                            <td valign="top">
-                                <h3><font face="Arial"><a href="artikel-pribadi1.html">Atlet Muda Menembak Asal Bitung</a></font></h3>
-                                <font face="Arial" size="2" color="silver">Diterbitkan pada 17 Maret 2026</font>
-                                <p align="justify"><font face="Arial">Atlet muda asal Bitung berbagi prestasi menembak: medali perak 2018, nasional Balikpapan 2019, POPNAS 2023.</font></p>
-                            </td>
-                        </tr>
-                    </table>
-                    <hr color="#333" size="1">
+            <article class="blog-card fade-in">
+                <img src="Photo&vid/Dream-Theater-2024-Studio.png" alt="Band Dream Theater" loading="lazy">
+                <div class="blog-card-content">
+                    <h3><a href="artikel-dreamtheater.html">Mengenal Band Dream Theater</a></h3>
+                    <div class="blog-meta">16 Maret 2026</div>
+                    <p>Dream Theater adalah band progressive metal yang terkenal dengan komposisi musik yang kompleks dan teknik permainan instrumen yang sangat tinggi.</p>
+                </div>
+            </article>
 
-                    <table border="0" width="100%" cellpadding="10">
-                        <tr>
-                            <td width="250" valign="top">
-                                <img src="./Photo&vid/Dream-Theater-2024-Studio.png" width="250" alt="Band Dream Theater">
-                            </td>
-                            <td valign="top">
-                                <h3><font face="Arial"><a href="artikel-dreamtheater.html">Mengenal Band Dream Theater</a></font></h3>
-                                <font face="Arial" size="2" color="silver">Diterbitkan pada 16 Maret 2026</font>
-                                <p align="justify"><font face="Arial">Dream Theater adalah band progressive metal yang terkenal dengan komposisi musik yang kompleks dan teknik permainan instrumen yang sangat tinggi.</font></p>
-                            </td>
-                        </tr>
-                    </table>
-                    <hr color="#333" size="1">
+            <article class="blog-card fade-in">
+                <img src="Photo&vid/OIP.jpg" alt="Artificial Intelligence" loading="lazy">
+                <div class="blog-card-content">
+                    <h3><a href="artikel-ai.html">Perkembangan AI oleh OpenAI</a></h3>
+                    <div class="blog-meta">15 Maret 2026</div>
+                    <p>Artificial Intelligence (AI) adalah teknologi yang memungkinkan komputer meniru kemampuan manusia seperti memahami bahasa dan menganalisis data.</p>
+                </div>
+            </article>
 
-                    <table border="0" width="100%" cellpadding="10">
-                        <tr>
-                            <td width="250" valign="top">
-                                <img src="./Photo&vid/OIP.jpg" width="250" alt="Artificial Intelligence">
-                            </td>
-                            <td valign="top">
-                                <h3><font face="Arial"><a href="artikel-ai.html">Perkembangan AI oleh OpenAI</a></font></h3>
-                                <font face="Arial" size="2" color="silver">Diterbitkan pada 15 Maret 2026</font>
-                                <p align="justify"><font face="Arial">Artificial Intelligence (AI) adalah teknologi yang memungkinkan komputer meniru kemampuan manusia seperti memahami bahasa dan menganalisis data.</font></p>
-                            </td>
-                        </tr>
-                    </table>
-                    <hr color="#333" size="1">
-
-                    <table border="0" width="100%" cellpadding="10">
-                        <tr>
-                            <td width="250" valign="top">
-                                <img src="./Photo&vid/yusuf.jpg" width="250" alt="Atlet menembak Yusuf Dikec">
-                            </td>
-                            <td valign="top">
-                                <h3><font face="Arial"><a href="artikel-yusuf-dikec.html">Yusuf Dikeç: Atlet Menembak Olimpiade</a></font></h3>
-                                <font face="Arial" size="2" color="silver">Diterbitkan pada 14 Maret 2026</font>
-                                <p align="justify"><font face="Arial">Yusuf Dikeç adalah atlet menembak asal Turki yang meraih medali perak pada Olimpiade Paris 2024 di nomor 10 meter air pistol mixed team.</font></p>
-                            </td>
-                        </tr>
-                    </table>
-
-                </td>
-            </tr>
-        </table>
+            <article class="blog-card fade-in">
+                <img src="Photo&vid/yusuf.jpg" alt="Atlet menembak Yusuf Dikec" loading="lazy">
+                <div class="blog-card-content">
+                    <h3><a href="artikel-yusuf-dikec.html">Yusuf Dikeç: Atlet Menembak Olimpiade</a></h3>
+                    <div class="blog-meta">14 Maret 2026</div>
+                    <p>Yusuf Dikeç adalah atlet menembak asal Turki yang meraih medali perak pada Olimpiade Paris 2024 di nomor 10 meter air pistol mixed team.</p>
+                </div>
+            </article>
+        </div>
     </main>
 
     <br><br>
     <hr width="800" color="#333">
 
+    <script defer src="script.js"></script>
 </body>
 </html>

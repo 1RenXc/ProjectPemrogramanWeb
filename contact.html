@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak - Dearen Kansil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body bgcolor="#000018" text="white" link="silver" vlink="gray" alink="silver">
+    <canvas id="matrix-canvas"></canvas>
+    <nav>
+        <div class="nav-container">
 
-    <table border="0" width="100%" cellpadding="10" bgcolor="#222222">
-        <tr>
-            <td align="center">
-                <font face="Arial">
-                    <a href="index.html">Beranda</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="gallery.html">Galeri</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="blog.html">Blog</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="contact.html">Kontak</a>
-                </font>
-            </td>
-        </tr>
-    </table>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
     <br><br>
 
@@ -72,5 +77,6 @@
     <br><br><br>
     
     <hr width="800" color="#333">
+    <script defer src="script.js"></script>
 </body>
 </html>

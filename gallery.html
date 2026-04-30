@@ -4,73 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri - Dearen Kansil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body bgcolor="#000018" text="white" link="silver" vlink="gray" alink="silver">
+    <canvas id="matrix-canvas"></canvas>
+    <nav>
+        <div class="nav-container">
 
-    <table border="0" width="100%" cellpadding="10" bgcolor="#222222">
-        <tr>
-            <td align="center">
-                <font face="Arial">
-                    <a href="index.html">Beranda</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="gallery.html">Galeri</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="blog.html">Blog</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-                    <a href="contact.html">Kontak</a>
-                </font>
-            </td>
-        </tr>
-    </table>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
     <br><br>
 
     <main>
-        <h1 align="center"><font face="Arial">Galeri</font></h1>
+        <h1>Galeri</h1>
         
-        <table border="0" cellpadding="0" cellspacing="0" width="800" align="center">
-            <tr>
-                <td>
-                    <table border="0" cellpadding="10" width="100%">
-                        <tr>
-                            <td align="center" width="33%" valign="bottom">
-                                <video controls width="300">
-                                    <source src="./Photo&vid/drums.mp4" type="video/mp4">
-                                    Video drums - browser tidak support.
-                                </video>
-                            </td>
-                            <td align="center" width="33%" valign="bottom">
-                                <img src="./Photo&vid/Motor.jpg" width="350" >
-                            </td>
-                            <td align="center" width="33%" valign="bottom">
-                                <video controls width="300">
-                                    <source src="./Photo&vid/Cover.mp4" type="video/mp4">
-                                     video gitar - browser tidak support.
-                                </video>
-                            </td>
-                        </tr>
-                    </table>
-                    
-                    <br>
-                    
-                    <table border="0" cellpadding="10" width="100%">
-                        <tr>
-                            <td align="center" width="33%" valign="top">
-                                <img src="./Photo&vid/Guitarist.jpeg" width="350" >
-                            </td>
-                            <td align="center" width="33%" valign="top">
-                                <img src="./Photo&vid/GitarxDrum.jpg" width="350" >
-                            </td>
-                            <td align="center" width="33%" valign="top">
-                                <img src="./Photo&vid/FotoBersama.jpg" width="380" >
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <video controls preload="metadata">
+                    <source src="Photo&vid/drums.mp4" type="video/mp4">
+                    Video drums tidak didukung.
+                </video>
+                <div class="gallery-overlay"></div>
+            </div>
+            
+            <div class="gallery-item fade-in">
+                <img src="Photo&vid/Motor.jpg" alt="Motor" loading="lazy">
+                <div class="gallery-overlay"></div>
+            </div>
+            
+            <div class="gallery-item fade-in">
+                <video controls preload="metadata">
+                    <source src="Photo&vid/Cover.mp4" type="video/mp4">
+                    Video gitar tidak didukung.
+                </video>
+                <div class="gallery-overlay"></div>
+            </div>
+            
+            <div class="gallery-item fade-in">
+                <img src="Photo&vid/Guitarist.jpeg" alt="Guitarist" loading="lazy">
+                <div class="gallery-overlay"></div>
+            </div>
+            
+            <div class="gallery-item fade-in">
+                <img src="Photo&vid/GitarxDrum.jpg" alt="Gitar dan Drum" loading="lazy">
+                <div class="gallery-overlay"></div>
+            </div>
+            
+            <div class="gallery-item fade-in">
+                <img src="Photo&vid/FotoBersama.jpg" alt="Foto Bersama" loading="lazy">
+                <div class="gallery-overlay"></div>
+            </div>
+        </div>
     </main>
 
     <br><br>
 
     <hr width="800">
 
+    <script defer src="script.js"></script>
 </body>
 </html>
