@@ -528,7 +528,7 @@ main table img:hover {
   justify-content: center;
   border: none;
   outline: none;
-  z-index: 10;
+  z-index: 1010;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -694,6 +694,65 @@ main table[cellpadding="10"] tr {
 
   main hr {
     width: 90% !important;
+  }
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .profile-img {
+    max-width: 250px;
+  }
+
+  .profile-text h1 {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+
+  .profile-text .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .info-grid, .skills-grid {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .info-item, .skill-item {
+    padding: 1rem;
+  }
+
+  .skills-section, .cta-section {
+    padding: 2rem 1rem;
+    margin: 1rem auto;
+  }
+
+  .skills-section h2, .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .close {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
   }
 }
 
