@@ -477,6 +477,79 @@ main table img:hover {
   filter: drop-shadow(0 0 20px #a0a0ff) drop-shadow(0 4px 12px rgba(0,0,0,0.5));
 }
 
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background: rgba(42, 42, 58, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  backdrop-filter: blur(15px);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+  color: #a0a0ff;
+}
+
+.contact-header p {
+  color: silver;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0,0,18,0.65);
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(160,160,255,0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  background: rgba(10,10,40,0.8);
+}
+
+.contact-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.contact-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: #a0a0ff;
+}
+
+.contact-card a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.contact-card a:hover {
+  color: #c0c0ff;
+}
+
 /* Modal for Gallery */
 .modal {
   display: none;
@@ -667,6 +740,18 @@ hr {
     align-items: center;
   }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-card img {
+    margin-bottom: 0.75rem;
+  }
 
 main table[cellpadding="10"] tr {
     display: flex;
