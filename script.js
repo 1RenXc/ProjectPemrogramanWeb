@@ -120,7 +120,7 @@ function initFadeInObserver() {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-in, .blog-card, .info-item, .contact-item').forEach(el => {
+  document.querySelectorAll('.fade-in, .blog-card, .info-item, .contact-item, .skill-item').forEach(el => {
     observer.observe(el);
   });
 }
@@ -130,7 +130,7 @@ function initGalleryModal() {
   const modal = document.createElement('div');
   modal.className = 'modal';
   modal.innerHTML = `
-    <span class="close">&times;</span>
+    <button class="close" aria-label="Tutup galeri">&times;</button>
     <div class="modal-content"></div>
   `;
   document.body.appendChild(modal);
@@ -138,14 +138,23 @@ function initGalleryModal() {
   const closeBtn = modal.querySelector('.close');
   const modalContent = modal.querySelector('.modal-content');
 
-  // Close modal
-  closeBtn.addEventListener('click', () => {
+  // Function to close modal
+  function closeModal() {
     modal.style.display = 'none';
-  });
+    document.body.style.overflow = 'auto';
+    // Pause any playing video
+    const video = modalContent.querySelector('video');
+    if (video) {
+      video.pause();
+    }
+  }
+
+  // Close modal
+  closeBtn.addEventListener('click', closeModal);
 
   window.addEventListener('click', (e) => {
     if (e.target === modal) {
-      modal.style.display = 'none';
+      closeModal();
     }
   });
 
@@ -167,7 +176,6 @@ function initGalleryModal() {
         const video = modalContent.querySelector('video');
         if (video) {
           video.controls = true;
-          video.muted = true;
           video.style.display = 'block';
           video.style.margin = '0 auto';
         }
@@ -214,16 +222,6 @@ function initTypingEffect() {
     setTimeout(type, 500);
   });
 }
-
-// Parallax Effect on Scroll (performance optimized)
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const heroImgs = document.querySelectorAll('.profile-img');
-  heroImgs.forEach(img => {
-    const speed = scrolled * -0.5;
-    img.style.transform = `translateY(${speed}px)`;
-  });
-});
 
 // Keyboard Navigation Support
 document.addEventListener('keydown', (e) => {

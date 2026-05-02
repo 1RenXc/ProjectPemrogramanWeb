@@ -27,13 +27,14 @@ body {
 }
 
 nav {
-  background: rgba(34, 34, 34, 0.95);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(18, 18, 38, 0.95), rgba(34, 34, 60, 0.95));
+  box-shadow: inset 0 -1px 0 rgba(160, 160, 255, 0.15), 0 2px 20px rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(160, 160, 255, 0.15);
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 1rem 0;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 .nav-container {
@@ -145,7 +146,7 @@ main p, main h1, main h2, main ul {
 }
 
 .profile-img:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: translateY(-10px) scale(1.02);
 }
 
 .profile-text h1 {
@@ -153,6 +154,7 @@ main p, main h1, main h2, main ul {
   margin-bottom: 0.5rem;
   background: linear-gradient(45deg, #a0a0ff, silver);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 2s ease-in-out infinite alternate;
 }
@@ -161,6 +163,14 @@ main p, main h1, main h2, main ul {
   color: silver;
   font-size: 1.3rem;
   margin-bottom: 2rem;
+}
+
+.profile-text p {
+  margin-bottom: 2rem;
+  background: rgba(42, 42, 58, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 .info-grid {
@@ -191,6 +201,112 @@ main p, main h1, main h2, main ul {
   color: #a0a0ff;
   font-weight: bold;
   min-width: 100px;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(42, 42, 58, 0.5);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #a0a0ff;
+}
+
+.cta-section p {
+  margin-bottom: 2rem;
+  color: silver;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  background: linear-gradient(45deg, #a0a0ff, #6a6aff);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(160, 160, 255, 0.3);
+}
+
+/* Skills Section */
+.skills-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(42, 42, 58, 0.5);
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #a0a0ff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-item {
+  background: rgba(42, 42, 58, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item h3 {
+  color: #a0a0ff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.skill-item p {
+  color: silver;
+  line-height: 1.6;
+}
+
+.skill-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: silver;
+  font-size: 0.9rem;
+  background: rgba(34, 34, 34, 0.8);
+  margin-top: 2rem;
 }
 
 .blog-grid, .gallery-grid {
@@ -241,7 +357,36 @@ main p, main h1, main h2, main ul {
 }
 
 .gallery-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.gallery-grid.single-item {
+  grid-template-columns: 350px;
+  justify-content: center;
+}
+
+.gallery-section {
+  margin-bottom: 3rem;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  color: #a0a0ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Mobile adjustments for gallery */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .gallery-grid.single-item {
+    grid-template-columns: 250px;
+  }
+  .gallery-section h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .gallery-item {
@@ -258,9 +403,10 @@ main p, main h1, main h2, main ul {
 
 .gallery-item img, .gallery-item video {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
   display: block;
+  aspect-ratio: 1;
 }
 
 .gallery-overlay {
@@ -370,11 +516,59 @@ main table img:hover {
   top: 20px;
   right: 30px;
   color: white;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
   cursor: pointer;
+  background: rgba(0,0,0,0.65);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+.close:hover,
+.close:focus {
+  background: rgba(0,0,0,0.85);
+  transform: scale(1.05);
+}
+
+.close:focus-visible {
+  outline: 2px solid #a0a0ff;
+  outline-offset: 3px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .close {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+  }
+}
+.back-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #a0a0ff, #6a6aff);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(160, 160, 255, 0.3);
+}
 /* Animations */
 @keyframes fadeInUp {
   to {
@@ -460,35 +654,19 @@ hr {
     gap: 2rem;
   }
 
-  .blog-grid, .gallery-grid {
+  .info-grid {
     grid-template-columns: 1fr;
   }
 
-main {
-    padding: 0 1rem;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
-  /* Contact page mobile responsive */
-  main table[border="0"] {
-    width: 100% !important;
-    max-width: 360px;
-  }
-
-  main table[cellpadding="20"],
-  main table[cellpadding="10"] {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem !important;
-  }
-
-  main table[cellpadding="20"] tr,
-  main table[cellpadding="10"] tr {
-    display: flex;
+  .cta-buttons {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
   }
+
 
 main table[cellpadding="10"] tr {
     display: flex;
