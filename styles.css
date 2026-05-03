@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll; /* jaga lebar halaman tetap konsisten di semua halaman */
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #000018 0%, #0a0a2e 100%);
